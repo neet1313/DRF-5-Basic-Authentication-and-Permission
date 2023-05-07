@@ -20,3 +20,6 @@ class StudentViewset(viewsets.ModelViewSet):
 # AllowAny -> Anyone can access the API
 # IsAuthenticated -> User, Admin and Superuser can login
 # IsAdminUser -> Only Staff user(Admin) or Superuser can access the API
+# IsAuthenticatedOrReadOnly -> Authenticated user can change, Non-authenticated user can only read the API
+# DjangoModelPermissions -> We can control in admin panel that which user can user either of the GET, POST, PUT, PATCH, DELETE methods in the Viewset
+# DjangoModelPermissionsOrAnonReadOnly -> same as DjangoModelPermissions, but allows unauthenticated user to read-only the API
